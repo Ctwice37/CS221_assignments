@@ -1,0 +1,99 @@
+
+
+Assignment 2
+(Questions 1- 7)
+
+
+
+____________________________________________________________________________________________________________
+1:
+public static int example 1 (int []) {
+                                                    Cost                    Times
+int n = arr.length, total = 0;                      c1, c2                   1,1
+for (int j = 0; j < n; j++)                           c3                     n+1
+total += arr[j];                                      c4                      n
+return total;                                         c5                      1
+
+}                                                                        =   2n + 4
+                                                                         = O(n)
+____________________________________________________________________________________________________________
+2:
+public static int example 2 (int []) {
+                                                            Cost                    Times
+int n = arr.length, total = 0;                              c1,c2                    1,1
+for (int j = 0; j < n; j += 2)                               c3                      log n
+total += arr[j];                                             c4                       n
+return total;                                                c5                       1
+
+}                                                                           = log n + n + 3
+                                                                            = O(log n)
+____________________________________________________________________________________________________________
+3:
+public static in example 3 (int []) {                           Cost                    Times
+
+int n = arr.length, total = 0;                                  c1,c2                    1,1
+for(int j = 0; j < n; j ++)                                       c3                     n+1
+for(int k = 0; k < n; k++)                                        c4                     n(n+1)
+total += arr[j];                                                  c5                     n*n
+return total;                                                     c6                      1
+
+}                                                                               = 2n^2 + 2n + 4
+                                                                                = O(n^2)
+____________________________________________________________________________________________________________                                                                                = O(n^2)
+4:
+public static int example4(int[ ] arr) {                          Cost                    Times
+
+int n = arr.length, prefix = 0, total = 0;                       c1,c2                     1,1
+for (int j=0; j < n; j++) { // loop from 0 to n-1                   c3                     n+1
+prefix += arr[j];                                                   c4                      n
+total += prefix;                                                    c5                      n
+}
+return total;                                                       c6                      1
+
+}                                                                                   = 3n + 4
+                                                                                    = O(n)
+____________________________________________________________________________________________________________                                                                                    = O(n)
+5:
+public static int example5(int[ ] first, int[ ] second) {           Cost                    Times
+
+int n = first.length, count = 0;                                    c1,c2                    1,1
+for (int i=0; i < n; i++) { // loop from 0 to n-1                     c3                     n+1
+int total = 0;                                                        c4                      n
+for (int j=0; j < n; j++) // loop from 0 to n-1                       c5                     n+1
+for (int k=0; k <= j; k++) // loop from 0 to j                        c6                     n(n+1)
+total += first[k];                                                    c7                     n*n
+if (second[i] == total) count++;                                      c8                      1
+}
+return count;                                                         c9                      1
+
+}                                                                                      =    2n^2 + 4n + 6
+                                                                                       =    O(n^2)
+____________________________________________________________________________________________________________
+6:
+
+O(n)
+
+for(int i = 0; i < n; i++)
+        System.out.println("This is super complex");
+************************************************************************************************************
+O(n log n)
+
+for(int i = 0; i < n; i++)
+for(int z = 0; i < z; z +=2)
+System.out.println("Started bad, got better");
+************************************************************************************************************
+O(n^3)
+
+for(int x = 0; x < n; x++)
+for(int y = 0; y < n; y++)
+for(int z = 0; i < z; z++)
+System.out.println("So many loops..");
+************************************************************************************************************
+____________________________________________________________________________________________________________
+7.
+
+We want to focus of the worst case because it indicates how slowly
+a process may run given a particular data scenario. It also allows us
+to anticipate maximum time/memory allotments the program may need.
+It makes sense to plan for the worst, it helps prevent downstream problems.
+____________________________________________________________________________________________________________
