@@ -1,6 +1,8 @@
 package assignment_5;
 
-public class Student implements Comparable<Student> {
+import java.util.Iterator;
+
+public class Student implements Comparable<Student>{
 
     int sid;
     String sName;
@@ -14,10 +16,10 @@ public class Student implements Comparable<Student> {
 
     @Override
     public int compareTo(Student o) {
-        if(this.score < o.score)
+        if (this.score < o.score)
             return -1;
         else if (this.score > o.score)
-                return 1;
+            return 1;
         else return 0;
 
     }
@@ -25,7 +27,7 @@ public class Student implements Comparable<Student> {
     @Override
     public boolean equals(Object obj) {
         Student stud = (Student) obj;
-        if(this.score == stud.score)
+        if (this.score == stud.score)
             return true;
         return false;
 
@@ -39,4 +41,5 @@ public class Student implements Comparable<Student> {
                 ", score=" + score +
                 ']';
     }
+
 }

@@ -257,10 +257,10 @@ import java.util.Iterator;
 public static void main(String[] args){
     SingleLinkedList<String> s = new SingleLinkedList<>();
 
-    s.add("Test")
+    s.add("Test");
 
 }
 
     }
 
-}
+
