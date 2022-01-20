@@ -12,37 +12,47 @@ Check and report whether the expression is balanced
 */
 
 
-public class symbolsCheck {
-
-    private static final int INITIAL_CAPACITY = 10;
-    private int capacity;
-    private int size;
-    private String [] exp;
-    private int size = 0;
-
-    public symbolsCheck(){
-        exp = new String[INITIAL_CAPACITY];
-        capacity = INITIAL_CAPACITY;
-    }
-
-
-public boolean Balanced(String exp){
-    Integer curlyBrace = null;
-    Integer squareBracket = null;
-    Integer parentheses = null;
-
-    for(int i = 0; i < exp.length(); i++){
-
-    }
+//import java.util.ArrayList;
+//import java.util.Stack;
+//
+//public class symbolsCheck{
+//    Stack<String> sequence = new ArrayList();
+//    public boolean Balanced(String exp) {
+//
+//        Integer curlyBrace = 0;
+//        Integer squareBracket = 0;
+//        Integer parentheses = 0;
+//        int index = 0;
+//
+//        for (int i = 0; i < exp.length(); i++) {
+//
+//            if ((String.valueOf(exp.charAt(i)).equals("}") && curlyBrace == 0) || (String.valueOf(exp.charAt(0)).equals(")") && parentheses == 0)|| (String.valueOf(exp.charAt(0)).equals("]") && squareBracket == 0))
+//                return false;
+//            else if(String.valueOf(exp.charAt(i)).equals("{" || "(" || "["))
+//                expression[index++] = String.valueOf(exp.charAt(i));
+//            else if()
+//
 
 
+//            if (String.valueOf(exp.charAt(i)).equals("{" || "(" || "[")) {
+//                top++;
+//                expression[index] = String.valueOf(exp.charAt(i));
+//            }
+//            expression[index] = String.valueOf(exp.charAt(i));
 
-}
+//
+//        }
+//        return true;
+//    }
+//}
 
 
 
 
+//if (String.valueOf(exp.charAt(i)).equals("{"||"}"||"("||")"||"["||"]")) {
 
+//if (String.valueOf(exp.charAt(i)).equals("}"|| ")"||"]")) {
 
-
-}
+//String.valueOf(exp.charAt(i - 1)).equals("{")
+// || String.valueOf(exp.charAt(i - 1)).equals("[")
+//|| String.valueOf(exp.charAt(i - 1)).equals("(")

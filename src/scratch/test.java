@@ -4,15 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class test {
-    public static void main (String [] args){
-        List<String> list = new ArrayList<>();
-        list.add("Zaineh");
-        list.add("Yasmeen");
-        list.add("John");
-        list.set(2,"Moe");
-        list.add(2,"Dave");
-        list.remove(2);
-        System.out.print(list);
-    }
-}
 
+    public static void printCharsReverse(String str) {
+        if (str == null || str.equals(""))
+
+        return;
+
+        printCharsReverse(str.substring(1));
+        System.out.println(str.charAt(0));
+    }
+
+    public static void main (String [] args){
+
+
+        printCharsReverse("String");
+    }
+
+}
