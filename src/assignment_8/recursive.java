@@ -8,19 +8,18 @@ package assignment_8;
 
 */
 
+import java.util.ArrayList;
+
 public class recursive {
 
 
-    public static int findChar(String s, char c){
-        //return index of character if found, else returns -1
-
-
-
-        if(s.length()==0)
-            return 1;
+    public static boolean findChar(String s, char c){
+        //return true if character is found, else returns false
+        if(s.length() == 0)
+            return false;
         else{
             if(String.valueOf(s.charAt(0)).equals(String.valueOf(c)))
-                return 1 + findChar(s.substring(1), c);
+                return true;
             else
                 return findChar(s.substring(1), c);
 
@@ -32,39 +31,46 @@ public class recursive {
 
 
     public static int countVowels(String s) {
-
         String vowels = "aeiou";
+
+        //ArrayList<String> str = {"a", "e", "i", "o", "u"};
+
 
 
         if (s.length() == 0)
             return 0;
         else {
-            for (int j = 0; j < s.length(); j++) {
                 for (int i = 0; i < vowels.length(); i++) {
+                    if (String.valueOf(vowels.charAt(i)).equalsIgnoreCase(String.valueOf(s.charAt(0)))) {
 
-
-                    if (String.valueOf(vowels.charAt(i)).equalsIgnoreCase(String.valueOf(s.charAt(j)))) {
                         return 1 + countVowels(s.substring(1));
-
                     } else {
-                        return 0 + countVowels(s.substring(1));
-
+                        continue;
                     }
-
                 }
+            return countVowels(s.substring(1));
             }
-        }return 0;
-
     }
 
 
-    public 
 
 
+    public static String decToBinary(int binary){
+        StringBuilder ss = new StringBuilder();
 
+        if(binary % 2 == 0 && binary/2 == 0)
+            return String.valueOf(ss);
+        else{
+            if(binary % 2 == 0 || binary / 2 == 0)
+                return ss + "1" + decToBinary(binary/2);
 
+            else
+                return ss + "0" + decToBinary(binary/2);
+        }
+
+    }
     public static void main(String[] args){
-        System.out.println(findChar("String", 'r'));
+        System.out.println(decToBinary(4));
     }
 
 }
