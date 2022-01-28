@@ -9,6 +9,8 @@ package assignment_8;
 */
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class recursive {
 
@@ -31,7 +33,10 @@ public class recursive {
 
 
     public static int countVowels(String s) {
-        String vowels = "aeiou";
+       // String vowels = "aeiou";
+        String regex = ("[a||e||i||o||u]");
+        Pattern compile = Pattern.compile("[aeiou]");
+        Matcher matcher = compile.matcher(null);
 
         //ArrayList<String> str = {"a", "e", "i", "o", "u"};
 
@@ -40,17 +45,17 @@ public class recursive {
         if (s.length() == 0)
             return 0;
         else {
-                for (int i = 0; i < vowels.length(); i++) {
-                    if (String.valueOf(vowels.charAt(i)).equalsIgnoreCase(String.valueOf(s.charAt(0)))) {
+                //for (int i = 0; i < vowels.length(); i++) {
+                    if (regex.equalsIgnoreCase(String.valueOf(s.charAt(0)))) {
 
                         return 1 + countVowels(s.substring(1));
                     } else {
-                        continue;
+                        return countVowels(s.substring(1));
                     }
                 }
-            return countVowels(s.substring(1));
+
             }
-    }
+   // }
 
 
 
@@ -70,7 +75,7 @@ public class recursive {
 
     }
     public static void main(String[] args){
-        System.out.println(decToBinary(4));
+        System.out.println(countVowels("String"));
     }
 
 }
