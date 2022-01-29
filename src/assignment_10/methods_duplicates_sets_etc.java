@@ -45,15 +45,24 @@ public class methods_duplicates_sets_etc<E> {
     //**********____________________________________________________________________________________________________
     //Question 1____________________________________________________________________________________________________
 
-    public List removeDuplicates(List<E> l){
+    public List removeDuplicates(List<E> list){
 
-        Set<E> set = new LinkedHashSet<>();
+        Set<E> set = new HashSet<>();
         List<E> temp = new ArrayList<>();
 
-        set.addAll(l);
+        //set.addAll(list);
+        for (int i = 0; i < list.size(); i++) {
+            set.add(list.get(i));
 
-        for(E e : set)
-            temp.add(e);
+        }
+
+        for(E value : set)
+            temp.add(value);
+
+
+
+
+
 
         return temp;
     }
